@@ -37,13 +37,56 @@
     width: 108px;
     height: 100vh;
     background-color: var(--adlance_white);
+    /* background: #000; */
     border-right: 1px solid #ECECEC;
+    position: sticky;
+    top: 0;
+    padding: 30px 0px;
 }
 
-/* === OUR CLIENTS SECTION === */
+.logo_container {
+    width: 80%;
+    height: 150px;
+    /* background: dodgerblue; */
+    border: 2px solid dodgerblue;
+}
 
-.our_clients_container {
+.menu {
+    height: 400px;
+    width: 80%;
+    border: 2px solid red;
+}
+
+/* === MAIN CONTAINER === */
+
+.main_container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--adlance_gray);
+    display: flex;
+    flex-direction: column;
+}
+
+/* === STORIES SECTION === */
+
+.stories_section {
+    width: 100%;
+    min-height: 100vh;
+    background: magenta;
+}
+
+/* === CLIENTS SECTION === */
+
+.clients_section {
+    width: 100%;
+    min-height: 100vh;
+    background: orangered;
+}
+
+/* === FEATURED COMPAIGNS SECTION === */
+
+.featured_compaigns_section {
+    width: 100%;
+    min-height: 100vh;
+    background: greenyellow;
 }
