@@ -1,0 +1,49 @@
+/* === GLOBAL SETTINGS === */
+
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* === GLOBAL COLORS VARIABLES === */
+
+:root {
+    --adlance_primary_clr: #FCC013;
+    --adlance_primary_shade1: #EBAF01;
+    --adlance_primary_shade2: #FDD35C;
+
+    --adlance_secondary_clr: #262626;
+    --adlance_secondary_shade1: #282828;
+
+    --adlance_gray: #ECECEC;
+    --adlance_light_gray: #F5F5F5;
+    --adlance_white: #FFFFFF;
+}
+
+
+/* === ADLANCE SECTION-1 === */
+
+.adlance_section {
+    background-color: var(--adlance_primary_clr);
+    width: 100%;
+    height: 100vh;
+}
+
+/* === SIDE HEADER-DESKTOP === */
+
+.side_header {
+    width: 108px;
+    height: 100vh;
+    background-color: var(--adlance_white);
+    border-right: 1px solid #ECECEC;
+}
+
+/* === OUR CLIENTS SECTION === */
+
+.our_clients_container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--adlance_gray);
+}
