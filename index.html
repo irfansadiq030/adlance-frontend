@@ -15,6 +15,22 @@
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
+    <!--====== SWIPER JS css ======-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!--====== FONT-AWESOME-6 ======-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--======GOOGLE FONTS ======-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@100;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
 
@@ -24,16 +40,16 @@
 </head>
 
 <body>
-
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
     <!--====== ADLANCE SECTION ======-->
 
     <section class="adlance_section">
-
     </section>
 
     <!--====== MAIN SECTION ======-->
 
-    <section class="d-flex">
+    <section class="w-100 d-flex">
 
         <div class="side_header d-flex flex-column align-items-center justify-content-between">
             <div class="logo_container">
@@ -48,37 +64,78 @@
 
         <main class="main_container">
 
-            <!--====== LATEST STORIES SECTION ======-->
-            <section class="stories_section">
-
-            </section>
-
             <!--====== LATEST CLIENTS SECTION ======-->
             <section class="clients_section">
+                <div class="container-fluid h-100">
+                    <div class="row h-100">
+                        <div class="col-md-12 d-flex flex-column justify-content-center align-items-center pt-5">
 
+                            <h1 class="our_clients_heading text-center">Our Clients</h1>
+                            <p class="our_clients_descrp text-center">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                                dummy text ever since the
+                            </p>
+                        </div>
+                        <!-- CLIENTS SLIDER -->
+                        <div class="clients_slider_container">
+                            <div class="left_arrow d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="swiper">
+                                <div class="swiper-wrapper align-items-center">
+                                    <div class="client_slide swiper-slide">Slide 1</div>
+                                    <div class="client_slide swiper-slide">Slide 2</div>
+                                    <div class="client_slide swiper-slide">Slide 3</div>
+                                    <div class="client_slide swiper-slide">Slide 4</div>
+                                    <div class="client_slide swiper-slide">Slide 5</div>
+                                    <div class="client_slide swiper-slide">Slide 6</div>
+                                    <div class="client_slide swiper-slide">Slide 7</div>
+                                </div>
+                                <div class="swiper-pagination">
+                                    <div id="slide_index" class="index">1</div> 
+                                    <div class="pagination_gap"></div>
+                                    <div class="custom_pagination"></div>
+                                    
+                                    <!-- <div class="pagination_dots"></div> -->
+                                </div>
+                            </div>
+                            <div class="right_arrow d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
             </section>
+
+            <!--====== LATEST STORIES SECTION ======-->
+            <section class="stories_section"></section>
 
             <!--====== FEATURED COMPAIGNS SECTION ======-->
-            <section class="featured_compaigns_section">
-
-            </section>
+            <section class="featured_compaigns_section"></section>
 
         </main>
 
     </section>
+    </div>
+
 
 
     <!--====== JQUERY/JS SCRIPTS ======-->
 
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
     <!--====== BOOTSTRAP SCRIPTS ======-->
 
     <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
+    <!-- <script src="assets/js/popper.min.js"></script> -->
 
-    <!--====== Main js ======-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
     <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
