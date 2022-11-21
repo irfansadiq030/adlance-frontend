@@ -52,6 +52,16 @@ body {
 
 
 /* === ADLANCE SECTION-1 === */
+.adlance_scroll {
+    overflow-y: scroll;
+    height: 100vh;
+    /* scroll-snap-points-y: repeat(100vh); */
+    scroll-snap-type: y mandatory;
+}
+
+.adlance_scrolling {
+    scroll-snap-align: start;
+}
 
 .adlance_section {
     background-color: var(--adlance_primary_clr);
@@ -114,14 +124,15 @@ body {
 }
 
 .our_clients_heading {
-    font-size: 40px;
-    letter-spacing: 14px;
+    font-size: 45px;
+    font-weight: medium;
+    letter-spacing: 40px;
     transition: 1s all;
     color: var(--adlance_secondary_clr);
 }
 
-.our_clients_heading:hover{
-    transition:1s all;
+.our_clients_heading:hover {
+    transition: 1.5s all;
     letter-spacing: 0px;
 }
 
@@ -136,10 +147,7 @@ body {
 .swiper {
     width: 90%;
     min-height: 380px;
-    /* position: absolute; */
-    /* bottom: 0; */
     display: flex;
-    /* background: yellow; */
 }
 
 .clients_slider_container {
@@ -218,7 +226,7 @@ body {
     max-width: 10%;
 }
 
-/* Responsiveness */
+/* Responsiveness clients slider */
 
 @media screen and (min-width:1600px) {
     .swiper {
@@ -246,6 +254,14 @@ body {
     .right_arrow {
         position: relative;
         right: 70px;
+    }
+
+    .our_clients_heading {
+        font-size: 70px;
+    }
+
+    .our_clients_descrp{
+        font-size: 25px;
     }
 }
 
