@@ -121,8 +121,8 @@ const swiper = new Swiper('.swiper', {
         el: '.custom_pagination',
         clickable: true,
         // bulletElement: '.pagination_dots',
-        bulletClass:'pagination_dots',
-        bulletActiveClass:'active_pagination_dot',
+        bulletClass: 'pagination_dots',
+        bulletActiveClass: 'active_pagination_dot',
         renderBullet: function (index, className) {
             return `<div class="pagination_dots"></div>`;
         },
@@ -160,7 +160,7 @@ const swiper = new Swiper('.swiper', {
             slidesPerView: 5,
             spaceBetween: 10
         },
-        initialSlide:1,
+        initialSlide: 1,
         on: {
             init: function () {
                 slide_index = document.getElementById('slide_index');
@@ -174,9 +174,19 @@ const swiper = new Swiper('.swiper', {
 
 swiper.on('slideChange', function () {
     slide_index = document.getElementById('slide_index');
-    slide_index.innerHTML = swiper.realIndex+1;
+    slide_index.innerHTML = swiper.realIndex + 1;
     // console.log(swiper.realIndex);
 });
 
 
 //===== PRELOADER
+$("#newsletter_dropdown_btn").click(function (event) {
+    event.preventDefault();
+    $("#dropdown_options_container").toggleClass('d-none');
+})
+
+const selected_newsletter_purpose = (args) => {
+    $("#newsletter_btn_txt").text(args);
+    $("#dropdown_options_container").toggleClass('d-none');
+    $("#newsletter_looking_for").val(args);
+}

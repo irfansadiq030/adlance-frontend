@@ -50,18 +50,43 @@ body {
     display: none;
 }
 
+/* === GENERAL STYLES === */
+
+.adlance_primary_btn {
+    background: var(--adlance_primary_clr);
+    padding: 12px 40px;
+    border-radius: 32px;
+    border: 0;
+    color: var(--adlance_secondary_clr);
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.adlance_primary_btn:hover {
+    background: var(--adlance_primary_clr);
+    transition: 0.5s;
+    color: var(--adlance_secondary_clr);
+    transform: translateY(-3px);
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--adlance_primary_clr);
+    transition: 0.5s;
+}
 
 /* === ADLANCE SECTION-1 === */
-.adlance_scroll {
-    overflow-y: scroll;
+/* .adlance_scroll {
+    overflow-y: auto;
     height: 100vh;
-    /* scroll-snap-points-y: repeat(100vh); */
     scroll-snap-type: y mandatory;
 }
 
 .adlance_scrolling {
-    scroll-snap-align: start;
-}
+    scroll-snap-align: center;
+} */
 
 .adlance_section {
     background-color: var(--adlance_primary_clr);
@@ -110,7 +135,42 @@ body {
 .stories_section {
     width: 100%;
     min-height: 100vh;
-    background: magenta;
+    background: #f9f9f9;
+    padding-bottom: 85px;
+}
+
+.story_card {
+    width: 280px;
+    height: 350px;
+    margin: 5px;
+    border-radius: 10px;
+    background: #000;
+}
+
+.story_card:nth-child(2n) {
+    margin-top: 30px;
+}
+
+.all_stories_btn {
+    margin-top: 90px;
+}
+
+.latest_stories_heading {
+    padding-top: 60px;
+}
+
+/* Responsiveness */
+
+@media screen and (min-width:1600px) {
+    .story_card {
+        width: 346px;
+        height: 435px;
+        margin: 15px;
+    }
+
+    .story_card:nth-child(2n) {
+        margin-top: 40px;
+    }
 }
 
 /* === CLIENTS SECTION === */
@@ -126,7 +186,7 @@ body {
 .our_clients_heading {
     font-size: 45px;
     font-weight: medium;
-    letter-spacing: 40px;
+    letter-spacing: 25px;
     transition: 1s all;
     color: var(--adlance_secondary_clr);
 }
@@ -258,9 +318,10 @@ body {
 
     .our_clients_heading {
         font-size: 70px;
+        letter-spacing: 43px;
     }
 
-    .our_clients_descrp{
+    .our_clients_descrp {
         font-size: 25px;
     }
 }
@@ -278,4 +339,125 @@ body {
     height: 50vh;
     background: dodgerblue;
     margin: 5px;
+}
+
+/* === FOOTER SECTION === */
+
+.footer_container {
+    width: 100%;
+    min-height: 400px;
+    /* background: var(--adlance_light_gray); */
+}
+
+.footer_newsletter_input {
+    min-height: 400px;
+    background: var(--adlance_gray);
+    padding-top: 60px;
+}
+
+.newsletter_heading {
+    font-weight: 600;
+    margin-bottom: 45px;
+    color: var(--adlance_secondary_clr);
+}
+
+.input_field {
+    height: 70px;
+    background: var(--adlance_primary_clr);
+    border-radius: 55px;
+    position: relative;
+}
+
+.newsletter_input {
+    background-color: transparent;
+    border: 0;
+    caret-color: #FFFFFF;
+    padding: 5px 40px;
+    color: var(--adlance_white) !important;
+    font-size: 18px;
+    width: 60%;
+}
+
+.newsletter_input:focus {
+    background: transparent;
+    box-shadow: none;
+
+}
+
+.newsletter_input::placeholder {
+    color: #EBAF01;
+}
+
+.newsletter_dropdown_btn {
+    background: #fff;
+    border-radius: 50px;
+    padding: 12px 30px;
+    color: var(--adlance_primary_clr);
+    z-index: 6;
+    text-transform: capitalize;
+    border: none;
+}
+
+.newsletter_dropdown_btn:hover {
+    background: #fff;
+    color: var(--adlance_primary_clr);
+}
+
+.newsletter_dropdown_btn:focus {
+    border: 1px solid var(--adlance_gray);
+    background: #fff;
+}
+
+.fa-caret-down {
+    color: #FCC013;
+}
+
+.newletter_dropdown_container {
+    margin-right: 10px;
+    top: 0;
+}
+
+.dd {
+    display: flex;
+    position: absolute;
+    top: 11px;
+    min-height: 50px;
+    right: 15px;
+    border-radius: 0px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown_container {
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    background: #fff;
+    border-radius: 26px;
+    z-index: 5;
+    top: 5px;
+    padding-top: 35px;
+}
+
+.dropdown_container ul li {
+    padding: 5px 0px;
+    /* border-bottom: 1px solid var(--adlance_gray); */
+}
+
+.dropdown_container ul li:hover {
+    color: var(--adlance_primary_clr);
+    cursor: pointer;
+}
+
+.dropdown_container ul {
+    list-style: none;
+    text-align: left;
+    width: 100%;
+}
+
+.footer_link{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--adlance_secondary_clr);
 }
