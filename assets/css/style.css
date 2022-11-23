@@ -69,10 +69,11 @@ body {
     transform: translateY(-3px);
 }
 
-a{
+a {
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: var(--adlance_primary_clr);
     transition: 0.5s;
 }
@@ -128,6 +129,97 @@ a:hover{
     background-color: var(--adlance_gray);
     display: flex;
     flex-direction: column;
+}
+
+/* === HERO SECTION === */
+
+.hero_section {
+    width: 100%;
+    min-height: 100vh;
+    padding: 60px 0px;
+    background: url('../images/hero_bg.png');
+    background-size: cover;
+}
+
+.adlance_logo_container {
+    /* width: 10%; */
+    min-height: 200px;
+    /* border: 2px solid #fff; */
+}
+
+.a_dot_logo {
+    width: 450px;
+}
+
+.hero_content_container {
+    /* border: 2px solid #fff; */
+    margin-left: 20px;
+    min-height: 400px;
+}
+
+.hero_adlance_logo_container {
+    /* border: 2px solid #fff; */
+    margin-left: 30px;
+    min-height: 350px;
+}
+
+.hero_heading {
+    font-size: 65px;
+    color: var(--adlance_white);
+    font-weight: 800;
+    line-height: 65px;
+    min-width: 300px;
+    letter-spacing: 1px;
+}
+
+.small_heading {
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.preserved_txt {
+    margin: 0;
+    line-height: 40px;
+    margin-top: 0px;
+    display: block;
+    /* padding-right: 10px; */
+}
+
+.hero_primary_btn {
+    width: 130px;
+    height: 45px;
+    background: var(--adlance_primary_clr);
+    text-align: center;
+    text-decoration: none;
+    color: var(--adlance_secondary_clr);
+    font-weight: 600;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid var(--adlance_primary_clr);
+    cursor: pointer;
+}
+
+.hero_secondary_sbtn {
+    width: 130px;
+    height: 45px;
+    background: transparent;
+    border: 1.5px solid #fff;
+    text-align: center;
+    text-decoration: none;
+    color: var(--adlance_white);
+    font-weight: 600;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.hero_primary_btn:hover {
+    color: var(--adlance_secondary_clr);
 }
 
 /* === STORIES SECTION === */
@@ -456,7 +548,7 @@ a:hover{
     width: 100%;
 }
 
-.footer_link{
+.footer_link {
     text-decoration: none;
     cursor: pointer;
     color: var(--adlance_secondary_clr);
