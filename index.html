@@ -37,6 +37,9 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
 
+    <!--====== Normalize css ======-->
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
 </head>
 
 <body>
@@ -52,22 +55,22 @@
 
     <section class="w-100 d-flex">
 
-        <div class="side_header d-flex flex-column align-items-center justify-content-between">
+        <header class="side_header d-flex flex-column align-items-center justify-content-between">
             <div class="logo_container">
 
             </div>
             <nav class="menu">
 
             </nav>
-        </div>
+        </header>
 
         <!--====== MAIN CONTENT CONTAINER ======-->
 
         <main class="main_container">
 
             <!--====== HERO SECTION ======-->
-            <section class="hero_section">
-                <div class="container-fluid h-100">
+            <article class="hero_section">
+                <section class="container-fluid h-100">
                     <div class="row mx-auto d-flex align-items-end h-100">
                         <div class="col-md-1 adlance_logo_container">
                             <img src="assets/images/adlance-vertical-logo.png" alt="adlance logo">
@@ -88,12 +91,12 @@
                             <img class="a_dot_logo" src="assets/images/A logo.svg" alt="">
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </article>
 
             <!--====== LATEST CLIENTS SECTION ======-->
-            <section class="clients_section">
-                <div class="container-fluid h-100">
+            <article class="clients_section">
+                <section class="container-fluid h-100">
                     <div class="row h-100">
                         <div class="col-md-12 d-flex flex-column justify-content-center align-items-center pt-5">
 
@@ -134,13 +137,12 @@
                         </div>
 
                     </div>
-                </div>
-                <!-- </div> -->
-            </section>
+                </section>
+            </article>
 
             <!--====== LATEST STORIES SECTION ======-->
-            <section class="stories_section">
-                <div class="container-fluid h-100">
+            <article class="stories_section">
+                <section class="container-fluid h-100">
                     <div class="row">
                         <div class="col-md-12 d-flex flex-column justify-content-center align-items-center pt-3">
                             <h1 class="our_clients_heading text-center latest_stories_heading">Latest Stories</h1>
@@ -163,8 +165,8 @@
                         <button class="btn btn-primary w-auto mx-auto adlance_primary_btn all_stories_btn">All
                             Stories</button>
                     </div>
-                </div>
-            </section>
+                </section>
+            </article>
 
             <!--====== FEATURED COMPAIGNS SECTION ======-->
             <!-- <section class="featured_compaigns_section"></section> -->
@@ -174,8 +176,8 @@
     </section>
 
     <!--====== NEWSLETTER SECTION ======-->
-    <section class="footer_container col-md-12 ">
-        <div class=" text-center d-flex align-items-center flex-column footer_newsletter_input">
+    <article class="footer_container col-md-12 ">
+        <section class=" text-center d-flex align-items-center flex-column footer_newsletter_input">
             <h2 class="newsletter_heading">Join Our Monthly Newsletter</h2>
             <div class="input_field col-md-6 col-xxl-5">
                 <form id="newsletter_form" action="#"
@@ -202,8 +204,8 @@
                 </form>
                 <div class="btn adlance_primary_btn mt-5">Subscribe</div>
             </div>
-        </div>
-    </section>
+        </section>
+    </article>
 
     <!--====== FOOTER SECTION ======-->
     <footer class="page-footer font-small bg-white py-5">

@@ -13,6 +13,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+::selection {
+    background: var(--adlance_primary_shade2);
+}
+
 /* === GLOBAL COLORS VARIABLES === */
 
 :root {
