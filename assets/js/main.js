@@ -190,6 +190,12 @@ const selected_newsletter_purpose = (args) => {
 };
 
 //===== AIOS-Initilization
- AOS.init({
-   duration: 800,
- });
+AOS.init({
+  duration: 800,
+});
+
+//  Page Pilling
+
+$(document).ready(function () {
+    $("#pagepiling").pagepiling();
+});
