@@ -172,9 +172,13 @@ a:hover {
 
 /* Responsiveness */
 
-.main_container {
-    width: calc(100% - 108px);
+@media screen and (min-width:1600px) {
+    .main_container {
+        width: calc(100% - 108px);
+    }
 }
+
+
 
 /* === HERO SECTION === */
 
@@ -267,6 +271,25 @@ a:hover {
     color: var(--adlance_secondary_clr);
 }
 
+/* Responsiveness */
+@media screen and (min-width:1600px) {
+    .hero_section {
+        padding: 110px 0px;
+    }
+
+    .hero_heading {
+        font-size: 100px;
+        line-height: 100px;
+        width: 300px;
+    }
+
+    .a_dot_logo {
+        width: 650px;
+        margin-bottom: 130px;
+    }
+}
+
+
 /* === STORIES SECTION === */
 
 .stories_section {
@@ -281,7 +304,18 @@ a:hover {
     height: 350px;
     margin: 5px;
     border-radius: 10px;
-    background: #000;
+    /* background: #000; */
+    /* border: 2px solid #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story_card img {
+    width: 100;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .story_card:nth-child(2n) {
@@ -364,6 +398,8 @@ a:hover {
     justify-content: center;
     align-items: center;
     color: #fff;
+    background-image: url('../images/slide_logo_bg.png');
+    background-size: cover;
 }
 
 .swiper-slide-active {
@@ -428,29 +464,29 @@ a:hover {
 @media screen and (min-width:1600px) {
     .swiper {
         min-height: 500px;
-        width: 80%;
+        width: 90%;
         align-items: center;
     }
 
     .client_slide {
-        height: 367px;
+        height: 390px;
         /* width: 275px !important; */
         margin-bottom: 0px;
     }
 
     .swiper-slide-active {
-        height: 400px;
+        height: 410px;
         margin-bottom: 0px;
     }
 
     .left_arrow {
         position: relative;
-        left: 70px;
+        left: 35px;
     }
 
     .right_arrow {
         position: relative;
-        right: 70px;
+        right: 35px;
     }
 
     .our_clients_heading {
