@@ -190,12 +190,27 @@ const selected_newsletter_purpose = (args) => {
 };
 
 //===== AIOS-Initilization
-AOS.init({
-  duration: 800,
-});
+// AOS.init({
+//   duration: 800,
+// });
 
 //  Page Pilling
 
 $(document).ready(function () {
-    $("#pagepiling").pagepiling();
+    $("#pagepiling").pagepiling({
+      navigation: false,
+      loop: false,
+      // easing: "swing",
+      scrollingSpeed: 700,
+      onLeave: function (index, nextIndex, direction) {
+        //after leaving section 2
+        console.log("next:" + nextIndex);
+        // console.log("current:" + index);
+        if (index === 3 && direction === "down") {
+          $(".side_header").fadeOut(700);
+        } else {
+          $(".side_header").fadeIn(700);
+        }
+      },
+    });
 });
