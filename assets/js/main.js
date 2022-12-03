@@ -203,10 +203,7 @@ $(document).ready(function () {
       // easing: "swing",
       scrollingSpeed: 700,
       onLeave: function (index, nextIndex, direction) {
-        //after leaving section 2
-        console.log("next:" + nextIndex);
-        // console.log("current:" + index);
-        if (index === 3 && direction === "down") {
+        if (index === 4 && direction === "down") {
           $(".side_header").fadeOut(700);
         } else {
           $(".side_header").fadeIn(700);
