@@ -99,7 +99,8 @@ a:hover {
     background-color: var(--adlance_white);
     /* background: #000; */
     border-right: 1px solid #ECECEC;
-    position: fixed;
+    /* position: fixed; */
+    position: sticky;
     top: 0;
     padding: 10px 0px;
     z-index: 1;
@@ -150,9 +151,10 @@ a:hover {
     opacity: 0.5;
 }
 
-.menu .active{
+.menu .active {
     opacity: 1;
 }
+
 /* Responsiveness */
 
 @media screen and (min-width:1600px) {
@@ -185,14 +187,24 @@ a:hover {
     }
 }
 
+/* === adlance_sections_container CONTAINER === */
 
+.adlance_sections_container {
+    width: calc(100% - 90px);
+    min-height: 100vh;
+    /* margin-left: 90px; */
+}
 
+.custom_sec{
+    min-height: 100vh;
+    background: orangered;
+}
 /* === HERO SECTION === */
 
 .hero_section {
-    width: calc(100% - 90px);
-    margin-left: 90px;
-    /* min-height: 100vh; */
+    width: 100%;
+    /* margin-left: 90px; */
+    min-height: 100vh;
     padding: 60px 0px;
     background: url('../images/hero_bg.png');
     background-size: cover;
@@ -303,9 +315,9 @@ a:hover {
 /* === STORIES SECTION === */
 
 .stories_section {
-    width: calc(100% - 90px);
-    margin-left: 90px;
-    /* min-height: 100vh; */
+    width: 100%;
+    /* margin-left: 90px; */
+    min-height: 100vh;
     background: #f9f9f9;
     padding-bottom: 85px;
 }
@@ -527,15 +539,8 @@ a:hover {
     /* position: static; */
 }
 
-/* .footer_container {
-    width: 100%;
-    min-height: 400px;
-    background: var(--adlance_light_gray);
-    /* position: fixed; */
-/* z-index: 99 !important; */
-}
 
-*/ .footer_newsletter_input {
+.footer_newsletter_input {
     min-height: 400px;
     background: var(--adlance_gray);
     padding-top: 60px;
