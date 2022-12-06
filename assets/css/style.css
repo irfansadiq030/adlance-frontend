@@ -17,6 +17,27 @@ body {
     background: var(--adlance_primary_shade2);
 }
 
+/* width */
+.pp-scrollable::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+.pp-scrollable::-webkit-scrollbar {
+    background: var(--adlance_light_gray);
+}
+
+/* Handle */
+.pp-scrollable::-webkit-scrollbar-thumb {
+    background: var(--adlance_primary_clr);
+    border-radius: 1px;
+}
+
+/* Handle on hover */
+.pp-scrollable::-webkit-scrollbar-thumb:hover {
+    background: var(--adlance_primary_shade1);
+}
+
 /* === GLOBAL COLORS VARIABLES === */
 
 :root {
@@ -195,10 +216,11 @@ a:hover {
     /* margin-left: 90px; */
 }
 
-.custom_sec{
+.custom_sec {
     min-height: 100vh;
     background: orangered;
 }
+
 /* === HERO SECTION === */
 
 .hero_section {
