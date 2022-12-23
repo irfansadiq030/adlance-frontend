@@ -342,6 +342,7 @@ a:hover {
     min-height: 100vh;
     background: #f9f9f9;
     padding-bottom: 85px;
+    padding-top: 60px;
 }
 
 .story_card {
@@ -395,8 +396,11 @@ a:hover {
     width: 100%;
     min-height: 100vh;
     background: var(--adlance_gray);
-    padding: 50px 0px;
+    /* padding: 50px 0px; */
+    padding-bottom: 50px;
     color: var(--adlance_secondary_clr);
+    display: flex;
+    align-items: center;
 }
 
 .our_clients_heading {
@@ -421,9 +425,10 @@ a:hover {
 }
 
 .swiper {
-    width: 90%;
+    width: 91%;
     min-height: 380px;
     display: flex;
+    margin-top: 70px;
 }
 
 .clients_slider_container {
