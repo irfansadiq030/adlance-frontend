@@ -226,7 +226,7 @@ a:hover {
 .hero_section {
     width: 100%;
     /* margin-left: 90px; */
-    min-height: 100vh;
+    /* min-height: 100vh; */
     padding: 60px 0px;
     background: url('../images/hero_bg.png');
     background-size: cover;

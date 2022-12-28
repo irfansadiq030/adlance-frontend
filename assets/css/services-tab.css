@@ -245,3 +245,20 @@
     padding: 0 1% 0 0;
     color: #000;
 }
+
+/* === SERVICES SECTION RESPONSIVENESS === */
+
+/* width <= 1330px */
+@media screen and (max-width:1330px) {
+    .qodef-horizontal-accordion-showcase .qodef-m-content-inner {
+        flex-direction: column-reverse;
+    }
+
+    .qodef-horizontal-accordion-showcase .qodef-m-content-left {
+        width: 100%;
+    }
+
+    .qodef-horizontal-accordion-showcase .qodef-m-content-right {
+        width: 100%;
+    }
+}
