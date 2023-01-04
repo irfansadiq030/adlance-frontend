@@ -1,0 +1,75 @@
+@media screen and (max-width:1080px) {
+    .side_header {
+        display: none !important;
+    }
+
+    .hero_section {
+        min-height: 100vh;
+    }
+
+    .adlance_sections_container {
+        width: 100%;
+    }
+
+    .a_dot_logo {
+        width: 200px;
+        padding-top: 50px;
+    }
+
+    #services_section {
+        display: none;
+    }
+
+    .hero_heading {
+        min-width: 100px;
+        font-size: 45px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .hero_adlance_logo_container {
+        margin: 0;
+    }
+
+    .hero_content_container {
+        margin-left: 0;
+    }
+
+    .pp-scrollable::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .adlance_logo_container, .hero_adlance_logo_container {
+        display: none;
+    }
+
+    .hero_btns_container {
+        justify-content: space-evenly;
+    }
+
+    .mobile_adlance_dot_logo {
+        display: flex;
+        justify-content: center;
+    }
+
+    .our_clients_descrp {
+        width: 95%;
+    }
+
+    .our_clients_heading {
+        display: none;
+    }
+
+    .our_clients_heading_mobile {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 20px;
+    }
+
+    .swiper-pagination{
+        padding-left: 30px;
+    } .custom_pagination {
+        max-width: 50%;
+    }
+}
