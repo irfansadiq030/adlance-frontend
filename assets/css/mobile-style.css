@@ -67,9 +67,31 @@
         letter-spacing: 20px;
     }
 
-    .swiper-pagination{
+    .swiper-pagination {
         padding-left: 30px;
-    } .custom_pagination {
+    }
+
+    .custom_pagination {
         max-width: 50%;
+    }
+
+    .header_main_container {
+        flex-direction: column;
+    }
+
+    #adlance_navbar {
+        display: flex;
+    }
+
+    .fa-bars {
+        font-size: 30px;
+    }
+
+    .navbar-brand img {
+        width: 50px;
+    }
+
+    .navbar-toggler:focus{
+        box-shadow: none;
     }
 }
