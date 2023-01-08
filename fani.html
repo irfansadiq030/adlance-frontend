@@ -80,36 +80,29 @@
                         </ul>
                     </nav>
                 </header>
-                <nav id="adlance_navbar" class="navbar navbar-expand-sm navbar-light bg-light">
-                    <div class="container">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/images/adlance_a.svg" alt="" srcset="">
+                <nav class="mobile_nav">
+
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="">
+                            <img src="assets/images/adlance_a.svg" alt="adlance logo">
                         </a>
-                        <button class="navbar-toggler border-1 border-dark d-lg-none" type="button"
-                            data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
-                            aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                            <!-- <span class="navbar-toggler-icon"></span> -->
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="collapsibleNavId">
-                            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                                <li class="nav-item py-1">
-                                    <a class="nav-link active" href="#" aria-current="page">Home <span
-                                            class="visually-hidden">(current)</span></a>
-                                </li>
-                                <li class="nav-item py-1">
-                                    <a class="nav-link" href="#">About</a>
-                                </li>
-                                <li class="nav-item py-1">
-                                    <a class="nav-link" href="#">Services</a>
-                                </li>
-                                <li class="nav-item py-1">
-                                    <a class="nav-link" href="#">Contact</a>
-                                </li>
-                            </ul>
+                        <div class="iconContainer">
+                            <div class="hamburger hamburger--collapse" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
+                                <div class="hamburger-box">
+                                    <div class="hamburger-inner"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                 </nav>
+                <ul id="nav_container">
+                    <li class="mobile_nav_links">Home</li>
+                    <li class="mobile_nav_links">About</li>
+                    <li class="mobile_nav_links">Services</li>
+                    <li class="mobile_nav_links">Careers</li>
+                    <li class="mobile_nav_links">Contact</li>
+                </ul>
 
                 <div class="adlance_sections_container">
                     <!--====== HERO SECTION ======-->
@@ -538,11 +531,11 @@
 
 
     <!--====== CUSTOM/MAIN SCRIPTS ======-->
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/jquery.pagepiling.js"></script>
     <!-- Services Tab Scripts -->
     <script src="assets/js/gsap-gsap.min.js"></script>
     <script src="assets/js/services-tabs.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>

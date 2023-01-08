@@ -19,7 +19,7 @@ body {
 
 /* width */
 .pp-scrollable::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
 }
 
 /* Track */
@@ -176,9 +176,10 @@ a:hover {
     opacity: 1;
 }
 
-#adlance_navbar{
+.mobile_nav, .mobile_nav~ul{
     display: none;
 }
+
 /* Responsiveness */
 
 @media screen and (min-width:1600px) {
