@@ -75,6 +75,11 @@ body {
     display: none;
 }
 
+.container-fluid {
+    padding: 0;
+    overflow-x: hidden;
+}
+
 /* === GENERAL STYLES === */
 
 .adlance_primary_btn {
@@ -176,7 +181,7 @@ a:hover {
     opacity: 1;
 }
 
-.mobile_nav, .mobile_nav~ul{
+.mobile_nav, .mobile_nav~ul {
     display: none;
 }
 
@@ -398,6 +403,11 @@ a:hover {
     }
 }
 
+/* === STORIES SLIDER SECTION - MOBILE === */
+.mobile_stories_slider, .adlance_mobile_container {
+    display: none;
+}
+
 /* === CLIENTS SECTION === */
 
 .clients_section {
@@ -441,6 +451,7 @@ a:hover {
     min-height: 380px;
     display: flex;
     margin-top: 70px;
+    justify-content: center;
 }
 
 .clients_slider_container {
@@ -464,7 +475,7 @@ a:hover {
     background-size: cover;
 }
 
-.swiper-slide-active {
+.clients_slider_container .swiper-slide-active {
     width: 230px;
     min-height: 300px;
     margin-bottom: 20px;
@@ -489,7 +500,7 @@ a:hover {
 
 .swiper-pagination {
     bottom: 0px !important;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -518,7 +529,7 @@ a:hover {
 
 .custom_pagination {
     display: flex;
-    max-width: 10%;
+    /* max-width: 10%; */
 }
 
 /* Responsiveness clients slider */
@@ -536,7 +547,7 @@ a:hover {
         margin-bottom: 0px;
     }
 
-    .swiper-slide-active {
+    .clients_slider_container .swiper-slide-active {
         height: 410px;
         margin-bottom: 0px;
     }

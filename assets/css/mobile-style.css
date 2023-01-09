@@ -3,6 +3,10 @@
         display: none !important;
     }
 
+    .mobile_padding {
+        padding: 20px 30px;
+    }
+
     .hero_section {
         min-height: 100vh;
     }
@@ -36,7 +40,7 @@
     }
 
     .pp-scrollable::-webkit-scrollbar {
-        width: 5px;
+        width: 0px;
     }
 
     .adlance_logo_container, .hero_adlance_logo_container {
@@ -52,8 +56,37 @@
         justify-content: center;
     }
 
-    .our_clients_descrp {
-        width: 95%;
+    .header_main_container {
+        flex-direction: column;
+    }
+
+    /* === OUR CLIENTS SECTION- MOBILE STYLE === */
+    .swiper {
+        width: 100%;
+    }
+
+    .adlance_mobile_container {
+        display: block;
+    }
+
+    .mobile_descrp_txt {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .mobile_heading {
+        text-align: center;
+        letter-spacing: 20px;
+        font-size: 35px;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 50px;
+        transition: 1s all;
+    }
+
+    .mobile_heading:hover {
+        letter-spacing: 3px;
+        transition: 1s all;
     }
 
     .our_clients_heading {
@@ -65,18 +98,24 @@
         justify-content: center;
         text-align: center;
         letter-spacing: 20px;
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    .our_clients_descrp {
+        width: 100%;
     }
 
     .swiper-pagination {
-        padding-left: 30px;
+        /* padding-left: 30px; */
     }
 
     .custom_pagination {
-        max-width: 50%;
+        /* max-width: 50%; */
     }
 
-    .header_main_container {
-        flex-direction: column;
+    .left_arrow, .right_arrow {
+        display: none !important;
     }
 
     /* Mobile NAV Menu */
@@ -84,7 +123,7 @@
     .mobile_nav {
         display: flex;
         justify-content: space-between;
-        padding: 10px 10px 10px 10px;
+        padding: 10px 0px 10px 10px;
         min-height: 70px;
         align-items: center;
         flex-direction: column;
@@ -114,8 +153,41 @@
         padding: 15px 0px;
         border-bottom: 1px solid gray;
     }
-    #nav_container:last-child{
+
+    #nav_container:last-child {
         border: none;
+    }
+
+    /* === STORIES SLIDER SECTION- MOBILE === */
+    .adlance_stories_slider_container {
+        width: 100%;
+        background: var(--adlance_gray);
+    }
+
+    .stories_section {
+        display: none;
+    }
+
+    .mobile_stories_slider {
+        display: flex;
+        width: 100%;
+        min-height: 400px;
+        overflow: hidden;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: -30px;
+    }
+
+    .mobile_stories_slide {
+        width: 200px;
+        /* height: ; */
+        border-radius: 8px;
+    }
+
+    .mobile_stories_slide img {
+        width: 100%;
+        border-radius: 8px;
     }
 }
 

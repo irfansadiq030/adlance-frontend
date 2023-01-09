@@ -109,12 +109,13 @@ cursor.init();
 
 //===== CURSOR END
 
+//===== CLIENTS SLIDER - START
 const swiper = new Swiper(".swiper", {
   centeredSlides: true,
   loop: true,
   speed: 1100,
 
-  // If we need pagination
+  //pagination
   pagination: {
     el: ".custom_pagination",
     clickable: true,
@@ -138,19 +139,14 @@ const swiper = new Swiper(".swiper", {
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 1,
-      // spaceBetween: 20
+      slidesPerView: 1.5,
+      spaceBetween: 10,
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 2.2,
-      spaceBetween: 20,
+      spaceBetween: 15,
     },
-    // // when window width is >= 640px
-    // 640: {
-    //     slidesPerView: 3,
-    //     spaceBetween: 40
-    // },
     // when window width is >= 640px
     1060: {
       slidesPerView: 4,
@@ -177,7 +173,10 @@ swiper.on("slideChange", function () {
   // console.log(swiper.realIndex);
 });
 
-//===== PRELOADER
+
+//===== CLIENTS SLIDER - END
+
+//===== FOOTER NEWSLETTER SUBMIT BUTTON DROPDOWN
 $("#newsletter_dropdown_btn").click(function (event) {
   event.preventDefault();
   $("#dropdown_options_container").toggleClass("d-none");
@@ -189,12 +188,7 @@ const selected_newsletter_purpose = (args) => {
   $("#newsletter_looking_for").val(args);
 };
 
-//===== AIOS-Initilization
-// AOS.init({
-//   duration: 800,
-// });
-
-//  Page Pilling
+//===== PAGE SCROLLING EFFECT - START
 
 $(document).ready(function () {
   $("#pagepiling").pagepiling({
@@ -212,7 +206,11 @@ $(document).ready(function () {
   });
 });
 
-// Hamburger Click Animation Effect
+//===== PAGE SCROLLING EFFECT - END
+
+//
+
+//===== HAMBURGER CLICK Animation EFFECT - START
 
 const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function () {
@@ -221,7 +219,9 @@ hamburger.addEventListener("click", function () {
   // Do something else, like open/close menu
 });
 
-// Navigation Menu Animation
+//===== HAMBURGER CLICK Animation EFFECT - END
+
+//===== MOBILE NAVBAR Animation EFFECT - START
 
 const ham = document.querySelector(".hamburger");
 const menu = document.querySelector("#nav_container");
@@ -232,8 +232,8 @@ let tl = gsap.timeline({ paused: true });
 tl.to(menu, {
   duration: 0.4,
   opacity: 1,
-  minHeight:'280px',
-  top:0,
+  minHeight: "280px",
+  top: 0,
   // ease: "expo.inOut",
 });
 tl.from(
@@ -253,3 +253,50 @@ tl.reverse();
 ham.addEventListener("click", () => {
   tl.reversed(!tl.reversed());
 });
+
+//===== MOBILE NAVBAR Animation EFFECT - END
+
+//===== MOBILE STORIES SLIDER -START
+
+const storiesSwiper = new Swiper(".mobile_stories_slider", {
+  centeredSlides: true,
+  loop: true,
+  speed: 1000,
+  autoplay: {
+    delay: 1000,
+  },
+  delay: 1000,
+  //pagination
+  pagination: {
+    el: ".custom_pagination",
+    clickable: true,
+    // bulletElement: '.pagination_dots',
+    bulletClass: "pagination_dots",
+    bulletActiveClass: "active_pagination_dot",
+    renderBullet: function (index, className) {
+      return `<div class="pagination_dots"></div>`;
+    },
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 1.5,
+      spaceBetween: 10,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 2.2,
+      spaceBetween: 20,
+    },
+    
+  },
+});
+
+storiesSwiper.on("slideChange", function () {
+  storiesSlide_index = document.getElementById("storiesSlide_index");
+  storiesSlide_index.innerHTML = storiesSwiper.realIndex + 1;
+  // console.log(swiper.realIndex);
+});
+
+//===== MOBILE STORIES SLIDER -END
