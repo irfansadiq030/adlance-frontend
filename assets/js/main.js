@@ -173,7 +173,6 @@ swiper.on("slideChange", function () {
   // console.log(swiper.realIndex);
 });
 
-
 //===== CLIENTS SLIDER - END
 
 //===== FOOTER NEWSLETTER SUBMIT BUTTON DROPDOWN
@@ -256,6 +255,69 @@ ham.addEventListener("click", () => {
 
 //===== MOBILE NAVBAR Animation EFFECT - END
 
+//===== MOBILE FEATURED CAMPAIGNS SLIDER -START
+
+const adlanceMobileFeaturedSlider = new Swiper(
+  ".mobile_featured_campaigns_slider",
+  {
+    // init: true,
+    // loop: true,
+    initialSlide:2,
+    speed: 800,
+    navigation: {
+      nextEl: ".next_btn_mobile_fc",
+      prevEl: ".pre_btn_mobile_fc",
+    },
+    // slidesPerView: 2.5, // or 'auto'
+    // spaceBetween: 30,
+    slidesPerView: "auto",
+    centeredSlides: true,
+    // scale: 1.5,
+    effect: "coverflow", // 'cube', 'fade', 'coverflow',
+    coverflowEffect: {
+      rotate: 0, // Slide rotate in degrees
+      stretch: 0, // Stretch space between slides (in px)
+      depth: 170, // Depth offset in px (slides translate in Z axis)
+      modifier: 1, // Effect multipler
+      //   slideShadows: true, // Enables slides shadows
+      scale: 1,
+    },
+    grabCursor: true,
+    parallax: true,
+    breakpoints: {
+      500: {
+        // slidesPerView: "auto",
+        spaceBetween: 0,
+        // scale:2.5
+      },
+      1400: {
+        slidesPerView: 3.5,
+        spaceBetween: 0,
+      },
+    },
+    on: {
+      transitionStart: function () {
+        var activeIndex = this.activeIndex;
+        var slides = this.slides;
+
+        slides.forEach(function (slide, index) {
+          if (index === activeIndex) {
+            // slide.style.width = "250px";
+            slide.style.opacity = "1";
+            // console.log(slide)
+          } else {
+            // slide.style.width = "100%";
+          }
+        });
+      },
+    },
+  }
+);
+
+adlanceMobileFeaturedSlider.init();
+
+//===== MOBILE FEATURED CAMPAIGNS SLIDER -END
+
 //===== MOBILE STORIES SLIDER -START
 
 const storiesSwiper = new Swiper(".mobile_stories_slider", {
@@ -289,7 +351,6 @@ const storiesSwiper = new Swiper(".mobile_stories_slider", {
       slidesPerView: 2.2,
       spaceBetween: 20,
     },
-    
   },
 });
 

@@ -34,6 +34,9 @@
     <!--====== AOS-Animate on Scroll Style ======-->
     <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
 
+    <!--====== Swiper CSS CDN ======-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css">
+
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/png">
 
@@ -448,6 +451,40 @@
                             </div>
                         </div>
                     </article>
+                    <!--====== FEATURED COMPAIGNS SLIDER - For MOBILE ======-->
+                    <article class="mobile_featured_campaigns_container container-fluid">
+                        <section class="adlance_mobile_container mobile_padding">
+                            <div data-aos="fade-up" class="d-flex flex-column justify-content-center align-items-center">
+                                <h1 class="text-center mobile_heading">FEATURED <br> COMPAIGNS
+                                </h1>
+                            </div>
+                        </section>
+                        <section class="mobile_featured_campaigns_slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="https://picsum.photos/400" class="entity-img" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://picsum.photos/seed/picsum/400/400" class="entity-img" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://picsum.photos/id/34/400/400" class="entity-img" />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="https://picsum.photos/id/28/400/400" class="entity-img" />
+                                </div>
+                            </div>
+                        </section>
+                        <section class="featured_yellow_strip">   
+                            <div class="next_btn_mobile_fc">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </div>
+                            <div class="pre_btn_mobile_fc">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </div>
+                        </section>
+                    </article>
+                   
                     <!--====== LATEST STORIES SLIDER - For MOBILE ======-->
                     <article class="container-fluid adlance_stories_slider_container">
                         <section class="adlance_mobile_container mobile_padding">
@@ -505,7 +542,8 @@
                                     <div id="dropdown_options_container" class="dropdown_container d-none">
                                         <ul>
                                             <!-- <li onclick="selected_newsletter_purpose('Looking for')">Looking For</li> -->
-                                            <li onclick="selected_newsletter_purpose('job opening')">Job Openings</li>
+                                            <li onclick="selected_newsletter_purpose('job opening')">Job Openings
+                                            </li>
                                             <li onclick="selected_newsletter_purpose('future offers')">Future Offers
                                             </li>
                                         </ul>
@@ -546,8 +584,8 @@
                     </h2>
                     <form action="#" class="w-100">
                         <div class="mb-3">
-                            <input type="text" class="adlance_mobile_input form-control" name="" id="" aria-describedby="helpId"
-                                placeholder="Email address here">
+                            <input type="text" class="adlance_mobile_input form-control" name="" id=""
+                                aria-describedby="helpId" placeholder="Email address here">
                         </div>
                         <div class="mb-3">
                             <select class="form-select form-select-lg adlance_mobile_input" name="" id="">
@@ -575,7 +613,7 @@
                         <i class="footer-social mx-md-3 fab fa-facebook" style="font-size: 25px"></i>
                         <i class="footer-social mx-md-3 fab fa-youtube" style="font-size: 25px"></i>
                     </div>
-                    
+
                 </div>
             </footer>
         </div>

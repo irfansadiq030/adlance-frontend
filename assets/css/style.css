@@ -580,6 +580,11 @@ a:hover {
     background: greenyellow;
 }
 
+/* === FEATURED COMPAIGNS SECTION - Mobile === */
+
+.mobile_featured_compaigns_container{
+    display: none;
+}
 /* === FOOTER SECTION === */
 
 .adlance_footer {
@@ -703,6 +708,6 @@ a:hover {
     color: var(--adlance_secondary_clr);
 }
 
-.adlance_footer .mobile_footer{
+.adlance_footer .mobile_footer {
     display: none;
 }
