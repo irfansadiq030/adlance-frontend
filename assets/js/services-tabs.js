@@ -738,7 +738,9 @@ function(s) {
             const e = s(".qodef-horizontal-accordion-showcase");
             e.length && e.each(function() {
                 var e = s(this);
-                n.tabItemStyle(e), n.initTab(e)
+                console.log(e);
+                n.tabItemStyle(e), 
+                n.initTab(e)
             })
         },
         initTab: function(e) {
@@ -767,8 +769,16 @@ function(s) {
                     y: 120,
                     opacity: 0,
                     duration: 1.2
-                }, "<.3"), t.hasClass("active") || 0 !== o || (t.addClass("active"), a.play(0)), e.on("click", function() {
-                    t.hasClass("active") && t.index() !== o ? t.removeClass("active") : (t.addClass("active"), a.play(0)), t.siblings(".active").removeClass("active"), d.parent().each(function(e) {
+                }, "<.3"), 
+                t.hasClass("active") || 0 !== o || (t.addClass("active"), 
+                a.play(0)), 
+                e.on("click", function() {
+                    t.hasClass("active") && t.index() !== o ? 
+                        t.removeClass("active") : //using ternary operator
+                        (t.addClass("active"), 
+                        a.play(0)), 
+                        t.siblings(".active").removeClass("active"), 
+                        d.parent().each(function(e) {
                         e = e <= o ? 0 : 100;
                         s(this).css("transform", "translate3d(" + e + "%, 0, 0)")
                     })
@@ -780,7 +790,8 @@ function(s) {
             i.length && i.each(function(e) {
                 e++;
                 var o = s(this).find(".qodef-m-header");
-                n.tabItemStyleDesktop(s(this), i, o, e), e === i.length && t.addClass("qodef--init")
+                n.tabItemStyleDesktop(s(this), i, o, e), 
+                e === i.length && t.addClass("qodef--init")
             })
         },
         tabItemStyleDesktop: function(e, o, t, i) {

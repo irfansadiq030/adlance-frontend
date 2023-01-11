@@ -702,3 +702,7 @@ a:hover {
     cursor: pointer;
     color: var(--adlance_secondary_clr);
 }
+
+.adlance_footer .mobile_footer{
+    display: none;
+}

@@ -1,3 +1,6 @@
+/* When width is <767px */
+@media screen and (max-width:767px) {}
+
 @media screen and (max-width:1080px) {
     .side_header {
         display: none !important;
@@ -107,7 +110,7 @@
     }
 
     .swiper-pagination {
-        /* padding-left: 30px; */
+        padding-bottom: 30px;
     }
 
     .custom_pagination {
@@ -174,9 +177,9 @@
         min-height: 400px;
         overflow: hidden;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         position: relative;
-        margin-top: -30px;
+        /* margin-top: -30px; */
     }
 
     .mobile_stories_slide {
@@ -188,6 +191,59 @@
     .mobile_stories_slide img {
         width: 100%;
         border-radius: 8px;
+    }
+
+    /* MOBILE FOOTER STYLES */
+    .adlance_footer .desktop_footer {
+        display: none;
+    }
+
+    .adlance_footer .mobile_footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .mobile_footer_heading {
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px;
+        line-height: 35px;
+    }
+
+    .adlance_mobile_input {
+        padding: 15px;
+        border-radius: 50px;
+    }
+
+    adlance_mobile_input::placeholder {
+        text-align: center;
+    }
+
+    .adlance_mobile_input:focus {
+        border: none !important;
+        box-shadow: none;
+    }
+
+    .mobile_footer_links {
+        margin: 0;
+        padding: 20px 0px 0px 0px;
+    }
+
+    .mobile_footer_links li {
+        padding: 10px 8px 0px 7px;
+        list-style: none;
+    }
+
+    .mobile_footer_links li a {
+        text-decoration: none;
+        color: var(--adlance_secondary_clr);
+    }
+
+    .mobile_footer .footer-social{
+        padding: 10px;
     }
 }
 
