@@ -109,12 +109,26 @@ cursor.init();
 
 //===== CURSOR END
 
+//===== Web Page Scrollbar progress calculate -START
+$(document).ready(function () {
+  $(document).scroll(function () {
+    var totalHeight = $("#pagepiling").height();
+    // $(".nav_border").css("width", totalHeight+'%');
+    alert(totalHeight);
+    var currentScroll = $(window).scrollTop();
+    var percentageScrolled =
+      ((totalHeight - currentScroll) / totalHeight) * 100;
+    console.log(percentageScrolled + "%");
+  });
+});
+//===== Web Page Scrollbar progress calculate -END
+
 //===== CLIENTS SLIDER - START
-const swiper = new Swiper(".swiper", {
+const clientsSlider = new Swiper(".swiper", {
   centeredSlides: true,
   loop: true,
   speed: 1100,
-
+  simulateTouch: true,
   //pagination
   pagination: {
     el: ".custom_pagination",
@@ -129,28 +143,38 @@ const swiper = new Swiper(".swiper", {
 
   // Navigation arrows
   navigation: {
-    nextEl: ".left_arrow",
-    prevEl: ".right_arrow",
+    nextEl: ".right_arrow",
+    prevEl: ".left_arrow",
   },
   autoplay: {
-    delay: 2000,
+    delay: 1000,
   },
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.6,
       spaceBetween: 10,
     },
     // when window width is >= 480px
     480: {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    // when window width is >= 700px
+    700: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    // when window width is >= 850px
+    850: {
+      slidesPerView: 3.5,
       spaceBetween: 15,
     },
     // when window width is >= 640px
     1060: {
       slidesPerView: 4,
-      spaceBetween: 40,
+      spaceBetween: 20,
     },
     // when window width is >= 640px
     1360: {
@@ -167,10 +191,9 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-swiper.on("slideChange", function () {
+clientsSlider.on("slideChange", function () {
   slide_index = document.getElementById("slide_index");
-  slide_index.innerHTML = swiper.realIndex + 1;
-  // console.log(swiper.realIndex);
+  slide_index.innerHTML = clientsSlider.realIndex + 1;
 });
 
 //===== CLIENTS SLIDER - END
@@ -195,19 +218,17 @@ $(document).ready(function () {
     loop: false,
     // easing: "swing",
     scrollingSpeed: 700,
-    onLeave: function (index, nextIndex, direction) {
-      if (index === 4 && direction === "down") {
-        $(".side_header").fadeOut(700);
-      } else {
-        $(".side_header").fadeIn(700);
-      }
-    },
+    // onLeave: function (index, nextIndex, direction) {
+    //   if (index === 4 && direction === "down") {
+    //     $(".side_header").fadeOut(700);
+    //   } else {
+    //     $(".side_header").fadeIn(700);
+    //   }
+    // },
   });
 });
 
 //===== PAGE SCROLLING EFFECT - END
-
-//
 
 //===== HAMBURGER CLICK Animation EFFECT - START
 
@@ -215,7 +236,6 @@ const hamburger = document.querySelector(".hamburger");
 hamburger.addEventListener("click", function () {
   // Toggle class "is-active"
   hamburger.classList.toggle("is-active");
-  // Do something else, like open/close menu
 });
 
 //===== HAMBURGER CLICK Animation EFFECT - END
@@ -231,8 +251,8 @@ let tl = gsap.timeline({ paused: true });
 tl.to(menu, {
   duration: 0.4,
   opacity: 1,
-  minHeight: "280px",
-  top: 0,
+  minHeight: "275px",
+  top: 70,
   // ease: "expo.inOut",
 });
 tl.from(
@@ -253,6 +273,10 @@ ham.addEventListener("click", () => {
   tl.reversed(!tl.reversed());
 });
 
+$(document).click(function () {
+  // tl.reversed(!tl.reversed());
+});
+
 //===== MOBILE NAVBAR Animation EFFECT - END
 
 //===== MOBILE FEATURED CAMPAIGNS SLIDER -START
@@ -262,11 +286,11 @@ const adlanceMobileFeaturedSlider = new Swiper(
   {
     // init: true,
     // loop: true,
-    initialSlide:2,
+    initialSlide: 2,
     speed: 800,
     navigation: {
-      nextEl: ".next_btn_mobile_fc",
-      prevEl: ".pre_btn_mobile_fc",
+      nextEl: ".pre_btn_mobile_fc",
+      prevEl: ".next_btn_mobile_fc",
     },
     // slidesPerView: 2.5, // or 'auto'
     // spaceBetween: 30,

@@ -2,6 +2,14 @@
 @media screen and (max-width:767px) {}
 
 @media screen and (max-width:1080px) {
+
+    /* CURSOR DOT - Mobile start */
+
+    .cursor-dot-outline {
+        display: none;
+    }
+
+    /* CURSOR DOT - Mobile end */
     .side_header {
         display: none !important;
     }
@@ -61,6 +69,15 @@
 
     .header_main_container {
         flex-direction: column;
+    }
+
+    /* === OUR CLIENTS SECTION- DESKTOP STYLE === */
+    .client_slide {
+        transform: scale(.93) !important;
+    }
+
+    .clients_slider_container .swiper-slide-active {
+        /* transform: scale(1.2); */
     }
 
     /* === OUR CLIENTS SECTION- MOBILE STYLE === */
@@ -126,12 +143,33 @@
     .mobile_nav {
         display: flex;
         justify-content: space-between;
-        padding: 10px 0px 10px 10px;
+        padding: 10px 25px;
         min-height: 70px;
         align-items: center;
         flex-direction: column;
-        position: relative;
-        z-index: 2;
+        position: sticky;
+        top: 0;
+        z-index: 555;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04);
+
+    }
+
+    .nav_border {
+        margin-top: 10px;
+        /* padding-top: 15px; */
+        height: 2px;
+        background: var(--adlance_gray);
+        width: 100%;
+        /* border-bottom: 2px solid var(--adlance_gray); */
+    }
+
+    .nav_border::before {}
+
+    .nav_filled_border {
+        width: 60px;
+        height: 100%;
+        background-color: var(--adlance_primary_clr);
     }
 
     #nav_container {
@@ -142,23 +180,22 @@
         padding: 0;
         /* padding-left: 10px; */
         /* padding-bottom: 20px; */
-        /* background: #f5f5f5; */
+        background: #fff;
         /* transform: translateY(-200px); */
         text-align: center;
         /* margin-top: -350px; */
         top: -400px;
         display: block;
-        position: relative;
-        z-index: 1;
+        position: sticky;
+        z-index: 554;
+    }
+
+    #nav_container>*:not(:last-child) {
+        border-bottom: 0.3px solid rgba(128, 128, 128, 0.281);
     }
 
     #nav_container li {
         padding: 15px 0px;
-        border-bottom: 1px solid gray;
-    }
-
-    #nav_container:last-child {
-        border: none;
     }
 
 
@@ -326,9 +363,16 @@
 }
 
 /* Hamburger Animation Effects */
+.iconContainer {
+    /* width: 35px;
+    height: 35px;
+    border: 1px solid var(--adlance_secondary_clr);
+    border-radius: 4px; */
+    margin-top: 20px;
+}
 
 .hamburger {
-    padding: 15px 15px;
+    /* padding: 10px 10px; */
     display: inline-block;
     cursor: pointer;
     transition-property: opacity, filter;
@@ -359,21 +403,23 @@
 }
 
 .hamburger-box {
-    width: 40px;
-    height: 24px;
+    width: 35px;
+    /* height: 15px; */
     display: inline-block;
     position: relative;
+    /* background: #000; */
+    /* margin-top: 10px; */
 }
 
 .hamburger-inner {
     display: block;
-    top: 50%;
-    margin-top: -2px;
+    /* top: 50%; */
+    /* margin-top: -5px; */
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    width: 40px;
-    height: 4px;
+    width: 35px;
+    height: 2.5px;
     background-color: #000;
     border-radius: 4px;
     position: absolute;
@@ -389,10 +435,13 @@
 
 .hamburger-inner::before {
     top: -10px;
+    /* background: red; */
 }
 
 .hamburger-inner::after {
     bottom: -10px;
+    /* background: green; */
+    /* position: absolute; */
 }
 
 /*

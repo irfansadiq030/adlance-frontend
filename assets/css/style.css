@@ -473,13 +473,15 @@ a:hover {
     color: #fff;
     background-image: url('../images/slide_logo_bg.png');
     background-size: cover;
+    transform: scale(.92);
+    transition: all 0.8s ease-in-out;
 }
 
 .clients_slider_container .swiper-slide-active {
     width: 230px;
-    min-height: 300px;
-    margin-bottom: 20px;
-    transition: 0.4s;
+    /* min-height: 300px; */
+    /* margin-bottom: 20px; */
+    transform: scale(1) !important;
 }
 
 .left_arrow {
@@ -582,9 +584,10 @@ a:hover {
 
 /* === FEATURED COMPAIGNS SECTION - Mobile === */
 
-.mobile_featured_campaigns_container{
+.mobile_featured_campaigns_container {
     display: none;
 }
+
 /* === FOOTER SECTION === */
 
 .adlance_footer {
